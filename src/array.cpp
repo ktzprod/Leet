@@ -27,4 +27,13 @@ namespace leet {
         return max;
     }
 
+    bool contains_duplicate(const std::vector<int>& nums) {
+        std::unordered_map<int, bool> seen;
+        for (auto& n : nums) {
+            if (!seen.emplace(n, true).second) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

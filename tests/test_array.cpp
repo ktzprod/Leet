@@ -46,4 +46,19 @@ TEST_CASE("find_biggest_suited_distance()")
     }
 }
 
+TEST_CASE("contains_duplicate()")
+{
+    SUBCASE("example 1")
+    {
+        auto nums = std::vector<int> { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 };
+        REQUIRE(leet::contains_duplicate(nums));
+    }
+
+    SUBCASE("example 2")
+    {
+        auto nums = std::vector<int> { 1, 2, 3, 4 };
+        REQUIRE_FALSE(leet::contains_duplicate(nums));
+    }
+}
+
 TEST_SUITE_END();

@@ -26,4 +26,13 @@ namespace leet {
      * @return the biggest distance between the two number, 0 if there is no solution
      */
     LEET_API int find_biggest_suited_distance(const std::vector<int>& values);
+
+    /**
+     * @brief check if there is duplicates in the given numbers
+     *
+     * @param values the number list
+     *
+     * @return true if this is the case, false otherwise
+     */
+    LEET_API bool contains_duplicate(const std::vector<int>& values);
 }
