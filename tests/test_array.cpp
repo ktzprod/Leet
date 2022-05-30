@@ -31,4 +31,19 @@ TEST_CASE("find_sum()")
     }
 }
 
+TEST_CASE("find_biggest_suited_distance()")
+{
+    SUBCASE("example 1")
+    {
+        auto nums = std::vector<int> { 7, 1, 5, 3, 6, 4 };
+        REQUIRE_EQ(leet::find_biggest_suited_distance(nums), 5);
+    }
+
+    SUBCASE("example 2")
+    {
+        auto nums = std::vector<int> { 7, 6, 4, 3, 1 };
+        REQUIRE_EQ(leet::find_biggest_suited_distance(nums), 0);
+    }
+}
+
 TEST_SUITE_END();

@@ -18,4 +18,12 @@ namespace leet {
      */
     LEET_API std::optional<std::pair<int, int>> find_sum(const std::vector<int>& nums, int target);
 
+    /**
+     * @brief find the biggest distance between numbers in a vector that have suited indexes
+     *
+     * @param values the number list
+     *
+     * @return the biggest distance between the two number, 0 if there is no solution
+     */
+    LEET_API int find_biggest_suited_distance(const std::vector<int>& values);
 }

@@ -1,3 +1,4 @@
+#include <limits>
 #include <unordered_map>
 
 #include "array.h"
@@ -14,6 +15,16 @@ namespace leet {
             checked.insert({ nums[i], i });
         }
         return std::nullopt;
+    }
+
+    int find_biggest_suited_distance(const std::vector<int>& values) {
+        auto min = std::numeric_limits<int>::max();
+        auto max = 0;
+        for (auto v : values) {
+            min = std::min(min, v);
+            max = std::max(max, v - min);
+        }
+        return max;
     }
 
 }
