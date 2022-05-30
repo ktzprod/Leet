@@ -36,4 +36,22 @@ namespace leet {
         }
         return false;
     }
+
+    std::vector<int> product_except_self(std::vector<int>& values)
+    {
+        int size = values.size();
+        std::vector<int> result(size, 1);
+
+        for (auto i = 1; i < size; i++) {
+            result[i] = result[i - 1] * values[i - 1];
+        }
+
+        for (auto j = size - 1, m = 1; j >= 0; j--) {
+            result[j] *= m;
+            m *= values[j];
+        }
+
+        return result;
+    }
+
 }

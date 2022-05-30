@@ -61,4 +61,21 @@ TEST_CASE("contains_duplicate()")
     }
 }
 
+TEST_CASE("product_except_self()")
+{
+    SUBCASE("example 1")
+    {
+        auto nums = std::vector<int> { 1, 2, 3, 4 };
+        auto answer = std::vector<int> { 24, 12, 8, 6 };
+        REQUIRE_EQ(leet::product_except_self(nums), answer);
+    }
+
+    SUBCASE("example 2")
+    {
+        auto nums = std::vector<int> { -1, 1, 0, -3, 3 };
+        auto answer = std::vector<int> { 0, 0, 9, 0, 0 };
+        REQUIRE_EQ(leet::product_except_self(nums), answer);
+    }
+}
+
 TEST_SUITE_END();

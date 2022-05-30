@@ -35,4 +35,14 @@ namespace leet {
      * @return true if this is the case, false otherwise
      */
     LEET_API bool contains_duplicate(const std::vector<int>& values);
+
+    /**
+     * @brief Process the given array such that each element is equal
+     *        to the product of all the elements except itself
+     *
+     * @param values the number list
+     *
+     * @return the result as an array
+     */
+    std::vector<int> product_except_self(std::vector<int>& values);
 }
