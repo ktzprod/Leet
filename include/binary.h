@@ -1,5 +1,7 @@
 #pragma once
 
+#include <vector>
+
 #include "config.h"
 
 namespace leet {
@@ -22,4 +24,14 @@ namespace leet {
      * @return the number of bit set in the number n
      */
     LEET_API int hamming_weight(int n);
+
+    /**
+     * @brief Given an integer n, return an array with the number of 1's in the binary representation of each
+     *        number in the range [0, i].
+     *
+     * @param n
+     *
+     * @return the number of 1 in the binary representation of each number in range [0, i]
+     */
+    LEET_API std::vector<int> count_bits(int n);
 }

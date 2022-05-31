@@ -42,4 +42,17 @@ TEST_CASE("hamming_weight()")
     }
 }
 
+TEST_CASE("count_bits()")
+{
+    SUBCASE("example 1")
+    {
+        REQUIRE_EQ(leet::count_bits(2), std::vector<int> { 0, 1, 1 });
+    }
+
+    SUBCASE("example 2")
+    {
+        REQUIRE_EQ(leet::count_bits(5), std::vector<int> { 0, 1, 1, 2, 1, 2 });
+    }
+}
+
 TEST_SUITE_END();

@@ -23,4 +23,15 @@ namespace leet {
         }
         return c;
     }
+
+    std::vector<int> count_bits(int n)
+    {
+        std::vector<int> r(n + 1, 0);
+        for (int i = 1; i <= n; i++)
+        {
+            r[i] = r[i/2] + (i % 2);
+        }
+        return r;
+    }
+
 }
