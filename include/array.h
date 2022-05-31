@@ -44,5 +44,5 @@ namespace leet {
      *
      * @return the result as an array
      */
-    std::vector<int> product_except_self(std::vector<int>& values);
+    LEET_API std::vector<int> product_except_self(std::vector<int>& values);
 }
