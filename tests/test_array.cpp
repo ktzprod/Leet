@@ -108,4 +108,29 @@ TEST_CASE("max_product_subarray()")
     }
 }
 
+TEST_CASE("sum_triplets()")
+{
+    SUBCASE("example 1")
+    {
+        auto nums = std::vector<int> { -1, 0, 1, 2, -1, -4 };
+        auto triplets = leet::sum_triplets(nums, 0);
+        REQUIRE_EQ(triplets[0], std::make_tuple(-1, -1, 2));
+        REQUIRE_EQ(triplets[1], std::make_tuple(-1, 0, 1));
+    }
+
+    SUBCASE("example 2")
+    {
+        auto nums = std::vector<int> { };
+        auto triplets = leet::sum_triplets(nums, 0);
+        REQUIRE(triplets.empty());
+    }
+
+    SUBCASE("example 3")
+    {
+        auto nums = std::vector<int> { 0 };
+        auto triplets = leet::sum_triplets(nums, 0);
+        REQUIRE(triplets.empty());
+    }
+}
+
 TEST_SUITE_END();

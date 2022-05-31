@@ -63,4 +63,19 @@ namespace leet {
      * @return the value of the maximum subarray product
      */
     LEET_API int max_product_subarray(const std::vector<int>& values);
+
+    /**
+     * @brief return all the triplets [nums[i], nums[j], nums[k]] such that
+     *        i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == sum_value.
+     *
+     * @details note that the given array will be sort by
+     *          this function because its passed as a reference
+     *
+     * @param values the number list
+     *
+     * @param target the target sum of each triplets
+     *
+     * @return return all the triplets. Empty if no results has been found
+     */
+    LEET_API std::vector<std::tuple<int, int, int>> sum_triplets(std::vector<int>& values, int target);
 }

@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <limits>
 #include <unordered_map>
 
@@ -81,6 +82,32 @@ namespace leet {
             result = std::max(result, max);
         }
 
+        return result;
+    }
+
+    std::vector<std::tuple<int, int, int>> sum_triplets(std::vector<int>& values, int target)
+    {
+        std::sort(values.begin(), values.end());
+        std::vector<std::tuple<int, int, int>> result;
+        for (int i = 0; i < values.size(); i++) {
+            if (i > 0 && values[i] == values[i-1]) { continue; }
+            auto t = target - values[i];
+            for (int l = i + 1, r = values.size() - 1; l < r; ) {
+                if (i == l || i == r || l == r) { continue; }
+                auto v = values[l] + values[r];
+                if (v > t) {
+                    r--;
+                } else if (v < t) {
+                    l++;
+                } else {
+                    result.emplace_back(std::make_tuple(values[i], values[l], values[r]));
+                    while(l < values.size() - 1 && values[l] == values[l+1]) l++;
+                    while(r > 0 && values[r] == values[r-1]) r--;
+                    l++;
+                    r--;
+                }
+            }
+        }
         return result;
     }
 
