@@ -125,4 +125,17 @@ namespace leet {
         }
         return max_area;
     }
+
+    int missing_number(const std::vector<int>& values)
+    {
+        int result = values.size();
+        int i = 0;
+        for(auto num: values)
+        {
+            result ^= num;
+            result ^= i;
+            i++;
+        }
+        return result;
+    }
 }

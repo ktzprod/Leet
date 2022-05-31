@@ -92,4 +92,14 @@ namespace leet {
      * @return the biggest container area
      */
     LEET_API int max_area(const std::vector<int>& values);
+
+    /**
+     * @brief Given an array nums containing n distinct numbers in the range [0, n]
+     *        return the only number in the range that is missing from the array.
+     *
+     * @param values the number list
+     *
+     * @return the only number in the range that is missing from the array.
+     */
+    LEET_API int missing_number(const std::vector<int>& values);
 }

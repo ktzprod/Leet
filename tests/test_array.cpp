@@ -148,4 +148,25 @@ TEST_CASE("max_area()")
     }
 }
 
+TEST_CASE("missing_number()")
+{
+    SUBCASE("example 1")
+    {
+        auto nums = std::vector<int> { 3, 0, 1 };
+        REQUIRE_EQ(leet::missing_number(nums), 2);
+    }
+
+    SUBCASE("example 2")
+    {
+        auto nums = std::vector<int> { 0, 1 };
+        REQUIRE_EQ(leet::missing_number(nums), 2);
+    }
+
+    SUBCASE("example 3")
+    {
+        auto nums = std::vector<int> { 9, 6, 4, 2, 3, 5, 7, 0, 1 };
+        REQUIRE_EQ(leet::missing_number(nums), 8);
+    }
+}
+
 TEST_SUITE_END();
