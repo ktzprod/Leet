@@ -21,4 +21,25 @@ TEST_CASE("binary_sum()")
     }
 }
 
+TEST_CASE("hamming_weight()")
+{
+    SUBCASE("example 1")
+    {
+        // 12 -> 1100
+        REQUIRE_EQ(leet::hamming_weight(12), 2);
+    }
+
+    SUBCASE("example 2")
+    {
+        // 52 -> 0110100
+        REQUIRE_EQ(leet::hamming_weight(52), 3);
+    }
+
+    SUBCASE("example 3")
+    {
+        // 84980498 -> 0101000100001011001100010010
+        REQUIRE_EQ(leet::hamming_weight(84980498), 10);
+    }
+}
+
 TEST_SUITE_END();

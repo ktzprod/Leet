@@ -13,4 +13,14 @@ namespace leet {
         return a;
     }
 
+    int hamming_weight(int n)
+    {
+        auto c = 0;
+        while (n)
+        {
+            n &= (n-1);
+            c++;
+        }
+        return c;
+    }
 }
