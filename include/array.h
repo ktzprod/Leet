@@ -45,4 +45,13 @@ namespace leet {
      * @return the result as an array
      */
     LEET_API std::vector<int> product_except_self(std::vector<int>& values);
+
+    /**
+     * @brief find the maxixum subarray value of the given array
+     *
+     * @param values the number list
+     *
+     * @return the sum value of the maximum subarray
+     */
+    LEET_API int max_subarray(const std::vector<int>& values);
 }

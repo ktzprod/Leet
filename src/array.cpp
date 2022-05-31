@@ -54,4 +54,16 @@ namespace leet {
         return result;
     }
 
+    int max_subarray(const std::vector<int>& values)
+    {
+        int sum = 0;
+        int max = std::numeric_limits<int>::min();
+        for (int i = 0; i < values.size(); i++)
+        {
+            sum = std::max(sum + values[i], values[i]);
+            max = std::max(max, sum);
+        }
+        return max;
+    }
+
 }
