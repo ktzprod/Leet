@@ -93,4 +93,19 @@ TEST_CASE("max_subarray()")
     }
 }
 
+TEST_CASE("max_product_subarray()")
+{
+    SUBCASE("example 1")
+    {
+        auto nums = std::vector<int> { 2, 3, -2, 4 };
+        REQUIRE_EQ(leet::max_product_subarray(nums), 6);
+    }
+
+    SUBCASE("example 2")
+    {
+        auto nums = std::vector<int> { -2, 0, -1 };
+        REQUIRE_EQ(leet::max_product_subarray(nums), 0);
+    }
+}
+
 TEST_SUITE_END();

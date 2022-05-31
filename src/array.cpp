@@ -66,4 +66,22 @@ namespace leet {
         return max;
     }
 
+    int max_product_subarray(const std::vector<int>& values)
+    {
+        auto result = values[0];
+        auto min = result;
+        auto max = result;
+
+        for (int i = 1; i < values.size(); i++)
+        {
+            if (values[i] < 0)
+                std::swap(max, min);
+            max = std::max(values[i], max * values[i]);
+            min = std::min(values[i], min * values[i]);
+            result = std::max(result, max);
+        }
+
+        return result;
+    }
+
 }
