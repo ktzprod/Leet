@@ -111,4 +111,18 @@ namespace leet {
         return result;
     }
 
+    int max_area(const std::vector<int>& values)
+    {
+        auto max_area = std::numeric_limits<int>::min();
+        for (int l = 0, r = values.size() - 1; l < r; )
+        {
+            max_area = std::max(max_area, (r - l) * std::min(values[l], values[r]));
+            if (values[l] < values[r]) {
+                l++;
+            } else {
+                r--;
+            }
+        }
+        return max_area;
+    }
 }

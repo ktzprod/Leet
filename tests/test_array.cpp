@@ -133,4 +133,19 @@ TEST_CASE("sum_triplets()")
     }
 }
 
+TEST_CASE("max_area()")
+{
+    SUBCASE("example 1")
+    {
+        auto nums = std::vector<int> { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
+        REQUIRE_EQ(leet::max_area(nums), 49);
+    }
+
+    SUBCASE("example 2")
+    {
+        auto nums = std::vector<int> { 1, 1 };
+        REQUIRE_EQ(leet::max_area(nums), 1);
+    }
+}
+
 TEST_SUITE_END();

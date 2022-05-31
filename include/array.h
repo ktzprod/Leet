@@ -78,4 +78,18 @@ namespace leet {
      * @return return all the triplets. Empty if no results has been found
      */
     LEET_API std::vector<std::tuple<int, int, int>> sum_triplets(std::vector<int>& values, int target);
+
+    /**
+     * @brief return the maximum area based on the given numbers.
+     *
+     * @details consider you are given n non-negative integers say a1, a2, ..., an,
+     *          where each element in the array represents a point at coordinate (i, ai).
+     *          n vertical lines are drawn such that the two endpoints of the line i is at (i, ai) and (i, 0).
+     *          Find two lines, which, together with the x-axis forms a container, such that the container contains the biggest area.
+     *
+     * @param values the number list
+     *
+     * @return the biggest container area
+     */
+    LEET_API int max_area(const std::vector<int>& values);
 }
