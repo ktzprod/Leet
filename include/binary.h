@@ -34,4 +34,13 @@ namespace leet {
      * @return the number of 1 in the binary representation of each number in range [0, i]
      */
     LEET_API std::vector<int> count_bits(int n);
+
+    /**
+     * @brief Reverse bits of a given unsigned integer
+     *
+     * @param n
+     *
+     * @return a number that match the reverse bits order of n
+     */
+    LEET_API uint32_t reverse_bits(uint32_t n);
 }

@@ -55,4 +55,19 @@ TEST_CASE("count_bits()")
     }
 }
 
+TEST_CASE("reverse_bits()")
+{
+    SUBCASE("example 1")
+    {
+        auto n = 43261596; // 00000010100101000001111010011100
+        REQUIRE_EQ(leet::reverse_bits(n), 964176192); // expected 00111001011110000010100101000000
+    }
+
+    SUBCASE("example 2")
+    {
+        auto n = 4294967293; // 11111111111111111111111111111101
+        REQUIRE_EQ(leet::reverse_bits(n), 3221225471); // expected 10111111111111111111111111111111
+    }
+}
+
 TEST_SUITE_END();
