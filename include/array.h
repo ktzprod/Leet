@@ -1,5 +1,7 @@
 #pragma once
 
+#include <stdint.h>
+
 #include <optional>
 #include <utility>
 #include <vector>
